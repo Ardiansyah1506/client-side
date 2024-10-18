@@ -1,9 +1,17 @@
-import LabeledInput from "../elements/LabeledInput";
 import Button from "../elements/button";
+import LabeledInput from "../elements/LabeledInput";
 
-const LoginForm = () => {
+const FormSignUp = () => {
   return (
     <form action="">
+      <div className="mb-6">
+        <LabeledInput
+          label="Name"
+          type="text"
+          placeholder="John Doe"
+          name="name"
+        />
+      </div>
       <div className="mb-6">
         <LabeledInput
           label="Email Address"
@@ -21,10 +29,10 @@ const LoginForm = () => {
         />
       </div>
       <Button variant="bg-blue-400 w-full text-white" type="submit">
-        Login
+        Sign Up
       </Button>
     </form>
   );
 };
 
-export default LoginForm;
+export default FormSignUp;

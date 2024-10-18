@@ -1,16 +1,15 @@
+/* eslint-disable react/prop-types */
 import Logo from "../elements/logo";
-import LoginForm from "../fragments/LoginForm";
 
-const AuthLayout = () => {
+const AuthLayout = (props) => {
+  const { children, type } = props;
   return (
-   <div className="flex justify-center min-h-screen items-center bg-special-mainBg">
+    <div className="flex justify-center min-h-screen items-center bg-special-mainBg">
       {/* container start */}
       <div className="w-full max-w-sm">
         <Logo />
         {/* form start */}
-        <div className="mt-16">
-          <LoginForm />
-        </div>
+        <div className="mt-16">{children}</div>
         {/* form end */}
         {/* text start */}
         <div className="my-9 px-7 flex justify-center text-xs text-gray-03 items-center flex-col static">
@@ -71,7 +70,16 @@ const AuthLayout = () => {
         {/* sign in with google end */}
         {/* link start */}
         <div className="flex justify-center">
-          <a className="text-primary text-sm font-bold">Create an account</a>
+          {type == "sign up" ? (
+            <>
+              <span className="text-sm text-gray-03">
+                Already have an account?&nbsp;
+              </span>
+              <a className="text-primary text-sm font-bold">Sign In Here</a>
+            </>
+          ) : (
+            <a className="text-primary text-sm font-bold">Create an account</a>
+          )}
         </div>
         {/* link end */}
       </div>
