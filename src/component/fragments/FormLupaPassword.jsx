@@ -1,7 +1,7 @@
 import LabeledInput from "../elements/LabeledInput";
 import Button from "../elements/button";
 
-const LoginForm = () => {
+const FormLupaPassword = () => {
   return (
     <form action="">
       <div className="mb-6">
@@ -12,19 +12,12 @@ const LoginForm = () => {
           name="email"
         />
       </div>
-      <div className="mb-6">
-        <LabeledInput
-          label="Password"
-          type="password"
-          placeholder="*************"
-          name="password"
-        />
-      </div>
+   
       <Button variant="bg-[#299D91] w-full text-white" type="submit">
-        Login
+        Lupa Password
       </Button>
     </form>
   );
 };
 
-export default LoginForm;
+export default FormLupaPassword;

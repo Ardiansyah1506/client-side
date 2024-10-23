@@ -28,7 +28,7 @@ const FormSignUp = () => {
           name="password"
         />
       </div>
-      <Button variant="bg-blue-400 w-full text-white" type="submit">
+      <Button variant="bg-[#299D91] w-full text-white" type="submit">
         Sign Up
       </Button>
     </form>
