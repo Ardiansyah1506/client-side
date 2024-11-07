@@ -1,9 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../elements/button";
 import LabeledInput from "../elements/LabeledInput";
 
 const FormSignUp = () => {
+  const link = useNavigate()
+
+  const handlesubmit = (e) =>{
+    e.preventDefault()
+    link('/balance')
+  }
   return (
-    <form action="">
+    <form action="" onSubmit={handlesubmit}>
       <div className="mb-6">
         <LabeledInput
           label="Name"

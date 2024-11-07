@@ -2,6 +2,7 @@ import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
+import BalancePage from "./pages/balance";
 
 const App = () => {
   const myRouter = createBrowserRouter([
@@ -20,6 +21,10 @@ const App = () => {
     {
       path: "/forgotPassword",
       element: <ForgotPassword />,
+    },
+    {
+      path: "/balance",
+      element: <BalancePage />,
     },
   ]);
 
