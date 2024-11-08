@@ -1,12 +1,10 @@
-import Card from "../elements/card";
+import Card from "../elements/card/card";
+import CardTitle from "../elements/card/title";
 
 const CardGoals = () => {
   return (
     <>
-      {/* bottom content start */}
-      <div className="text-lg text-gray-02 mb-2">
-        Expenses Goals by Category
-      </div>
+      <CardTitle title="Expenses By Category" />
       <div className="mb-8 grid grid-row-1  md:grid-cols-3 gap-6">
         <div className="sm:w-1/3 md:w-full">
           <Card label="" />

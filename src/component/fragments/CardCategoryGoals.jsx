@@ -1,9 +1,10 @@
-import Card from "../elements/card";
+import Card from "../elements/card/card";
+import CardTitle from "../elements/card/title";
 
 const CardCategoryGoals = () => {
   return (
     <div>
-      <div className="text-lg text-gray-02 mb-2">Goals</div>
+      <CardTitle title="Goals" />
       <div className="mb-8 flex flex-col min-h-[150px]  md:flex-row  gap-6">
         <div className="w-full md:w-2/3">
           <Card label="" />
