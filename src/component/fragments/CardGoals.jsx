@@ -1,5 +1,5 @@
-import Card from "../elements/card/card";
-import CardTitle from "../elements/card/title";
+import Card from "../elements/Parentcard/card";
+import CardTitle from "../elements/Parentcard/title";
 
 const CardGoals = () => {
   return (
