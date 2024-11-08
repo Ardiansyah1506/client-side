@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import { Link } from "react-router-dom";
 import { Icon } from "../Icon/Index";
 import Logo from "../elements/logo";
 import { NavLink } from "react-router-dom";
@@ -80,7 +78,7 @@ const Navbar = () => {
       ))}
 
       </div>
-      <div className="bottom-2 sticky">
+      <div className="sticky bottom-12">
 	      
 	        <div onClick={handleLogout} className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white cursor-pointer">
 	          <div className="mx-auto sm:mx-0">
@@ -90,12 +88,12 @@ const Navbar = () => {
 	        </div>
         
         <div className="border-b my-10 border-b-special-bg"></div>
-        <div className="flex justify-evenly items-center">
+        <div className="flex justify-between">
           <div className="mx-auto sm:mx-0 self-center">
-            <img src="img/profile.png" className="w-20 h-20 rounded-full" />
+            <img src="images/profile.png" />
           </div>
           <div className="hidden sm:block">
-            <div className="text-white font-bold">Zii</div>
+            <div className="text-white font-bold">Ziii</div>
             <div className="text-xs">View Profile</div>
           </div>
           <div className="hidden sm:block self-center justify-self-end">
