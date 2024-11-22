@@ -1,3 +1,5 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
 const IconWrapper = ({ children }) => (
   <svg
     width="24"

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const Card = (props) => {
   const { title = false, desc, variant } = props;
 
