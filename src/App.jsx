@@ -1,27 +1,31 @@
-import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import ForgotPassword from "./pages/ForgotPassword";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import SignInPage from "./pages/signIn";
+import SignUpPage from "./pages/signUp";
+import ErrorRoute from "./pages/errorRoute";
+import ForgotPasswordPage from "./pages/forgotPassword";
+import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance";
-import GoalsPage from "./pages/goals";
+import GoalPage from "./pages/goal";
+import ExpensePage from "./pages/expense";
 
 const App = () => {
   const myRouter = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <DashboardPage />,
+      errorElement: <ErrorRoute />,
     },
     {
       path: "/login",
-      element: <SignIn />,
+      element: <SignInPage />,
     },
     {
       path: "/register",
-      element: <SignUp />,
+      element: <SignUpPage />,
     },
     {
-      path: "/forgotPassword",
-      element: <ForgotPassword />,
+      path: "/forgot-password",
+      element: <ForgotPasswordPage />,
     },
     {
       path: "/balance",
@@ -29,46 +33,19 @@ const App = () => {
     },
     {
       path: "/goal",
-      element: <GoalsPage />,
+      element: <GoalPage />,
+    },
+    {
+      path: "/expense",
+      element: <ExpensePage />,
     },
   ]);
 
-  return <RouterProvider router={myRouter} />;
+  return (
+    <>
+      <RouterProvider router={myRouter} />
+    </>
+  );
 };
-
-const Home = () => (
-  <div className="bg-gray-900 text-white">
-    <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-      <div className="mx-auto max-w-3xl text-center">
-        <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
-          Enhance Client-Side Performance.
-          <span className="sm:block"> Boost User Engagement. </span>
-        </h1>
-
-        <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
-          This project focuses on optimizing client-side programming, delivering
-          a smooth user experience with responsive design and dynamic
-          interactions.
-        </p>
-
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Link
-            className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
-            to="/login"
-          >
-            Login
-          </Link>
-
-          <Link
-            className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-            to="/register"
-          >
-            Register
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 export default App;

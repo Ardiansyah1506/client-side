@@ -1,16 +1,17 @@
-import { useNavigate } from "react-router-dom";
-import LabeledInput from "../elements/LabeledInput";
-import Button from "../elements/button";
+import Button from "../Elements/Button";
+import LabeledInput from "../Elements/LabeledInput";
 
-const LoginForm = () => {
-  const link = useNavigate()
-
-  const handlesubmit = (e) =>{
-    e.preventDefault()
-    link('/balance')
-  }
+const FormSignUp = () => {
   return (
-    <form onClick={handlesubmit}>
+    <form action="">
+      <div className="mb-6">
+        <LabeledInput
+          label="Name"
+          type="text"
+          placeholder="John Doe"
+          name="name"
+        />
+      </div>
       <div className="mb-6">
         <LabeledInput
           label="Email Address"
@@ -27,11 +28,11 @@ const LoginForm = () => {
           name="password"
         />
       </div>
-      <Button variant="bg-[#299D91] w-full text-white" type="submit">
-        Login
+      <Button variant="bg-primary w-full text-white" type="submit">
+        Sign Up
       </Button>
     </form>
   );
 };
 
-export default LoginForm;
+export default FormSignUp;

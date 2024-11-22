@@ -1,12 +1,12 @@
-import FormLupaPassword from "../component/fragments/FormLupaPassword";
-import AuthLayout from "../component/layout/AuthLayout";
+import FormForgotPassword from "../components/Fragments/FormForgotPassword";
+import AuthLayout from "../components/Layouts/AuthLayout";
 
-const ForgotPassword = () => {
+const ForgotPasswordPage = () => {
   return (
     <AuthLayout type="forgot">
-      <FormLupaPassword/>
+      <FormForgotPassword />
     </AuthLayout>
   );
 };
 
-export default ForgotPassword;
+export default ForgotPasswordPage;
